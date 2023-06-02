@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+body {
+  max-width: 1440px;
+  margin: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+  font-family: "Open Sans", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/********* TOOLBOX ***********/
+
+.flexCenter {
+  display: flex;
+  align-items: center;
+}
+
+.flexBetween {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flexJustifyCenter {
+  display: flex;
+  justify-content: center;
+}
+
+.flexWrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flexEvently {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexEnd {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.textVertical {
+  vertical-align: center;
+}

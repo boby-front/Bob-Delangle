@@ -1,0 +1,27 @@
+nav {
+  padding: 20px;
+  width: 80%;
+  margin: auto;
+}
+
+.nav-link {
+  width: 800px;
+  font-weight: 600;
+  font-size: 16px;
+  color: rgb(151, 150, 150);
+  cursor: pointer;
+}
+
+.nav-link li {
+  transition: all 0.3s ease;
+  padding: 15px;
+}
+
+.nav-link li:hover {
+  transform: translateY(20px);
+  border-bottom: solid 1px #b76efd;
+}
+
+.logo-responsiv {
+  height: 80px;
+}
