@@ -1,0 +1,68 @@
+h1 {
+  font-size: 60px;
+  margin-right: 12px;
+  color: rgb(94, 91, 91);
+}
+
+h1 span {
+  font-weight: 800;
+  color: #b76efd;
+  font-size: 70px;
+}
+
+h2 {
+  border: solid 2px rgb(187, 185, 185);
+  border-radius: 30px;
+  padding: 20px;
+  color: rgb(187, 185, 185);
+  position: absolute;
+  top: 510px;
+  cursor: pointer;
+  transition: all ease-in-out 1s;
+}
+
+h2:hover {
+  color: #b76efd;
+  border: #b76efd solid 2px;
+  transform: scale(1.1);
+}
+
+.target-title {
+  margin-right: 12px;
+  width: 300px;
+}
+
+.div-titles {
+  margin-top: 150px;
+  margin-left: 70px;
+  text-align: left;
+  position: relative;
+}
+
+.div-titles p {
+  position: absolute;
+  top: 200px;
+  width: 400px;
+  font-size: 22px;
+}
+
+.cosmonaute {
+  height: 800px;
+  transform: scaleX(-1) translateY(0);
+  position: absolute;
+  right: 300px;
+  top: 150px;
+  animation: levitate 2s ease-in-out infinite alternate;
+}
+
+@keyframes levitate {
+  0% {
+    transform: scaleX(-1) translateY(0);
+  }
+  50% {
+    transform: scaleX(-1) translateY(-20px);
+  }
+  100% {
+    transform: scaleX(-1) translateY(0);
+  }
+}

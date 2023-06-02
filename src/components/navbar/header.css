@@ -1,5 +1,5 @@
-nav {
-  padding: 20px;
+header {
+  padding: 10px;
   width: 80%;
   margin: auto;
 }
@@ -18,8 +18,26 @@ nav {
 }
 
 .nav-link li:hover {
-  transform: translateY(20px);
+  transform: translateY(25px);
   border-bottom: solid 1px #b76efd;
+}
+
+.nav-link li.bounce {
+  animation-name: bounce;
+  animation-duration: 0.5s;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+  75% {
+    transform: translateY(-8px);
+  }
 }
 
 .logo-responsiv {
