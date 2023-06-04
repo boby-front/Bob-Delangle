@@ -10,18 +10,18 @@ h1 span {
   font-size: 70px;
 }
 
-h2 {
+.more-info {
   border: solid 2px rgb(187, 185, 185);
   border-radius: 30px;
-  padding: 20px;
+  padding: 10px;
   color: rgb(187, 185, 185);
   position: absolute;
-  top: 510px;
+  top: 580px;
   cursor: pointer;
   transition: all ease-in-out 1s;
 }
 
-h2:hover {
+.more-info:hover {
   color: #b76efd;
   border: #b76efd solid 2px;
   transform: scale(1.1);
@@ -44,6 +44,10 @@ h2:hover {
   top: 200px;
   width: 400px;
   font-size: 22px;
+  border-top: 1px solid rgb(187, 185, 185);
+  border-bottom: 1px solid rgb(187, 185, 185);
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .cosmonaute {
@@ -65,4 +69,8 @@ h2:hover {
   100% {
     transform: scaleX(-1) translateY(0);
   }
+}
+
+article {
+  height: 80vh;
 }

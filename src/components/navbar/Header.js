@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./header.css";
 import logoResponsiv from "../../assets/images/logoResponsiv.png";
 
@@ -11,6 +11,8 @@ const NavBar = () => {
     portfolio: false,
     contact: false,
   });
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [headerOffset, setHeaderOffset] = useState(0);
 
   const handleMouseLeave = (item) => {
     setBounceMap((prevState) => ({
@@ -26,8 +28,31 @@ const NavBar = () => {
     }, 500);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+
+      if (currentScrollPos > prevScrollPos) {
+        setHeaderOffset(Math.max(headerOffset - 101, -101));
+      } else {
+        setHeaderOffset(Math.min(headerOffset + 101, 0));
+      }
+
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [prevScrollPos, headerOffset]);
+
   return (
-    <header className="flexBetween flexCenter">
+    <header
+      className="flexBetween flexCenter"
+      style={{ transform: `translateY(${headerOffset}px)` }}
+    >
       <img src={logoResponsiv} alt="" className="logo-responsiv" />
       <ul className="nav-link flexBetween">
         <li
@@ -43,12 +68,6 @@ const NavBar = () => {
           À PROPOS
         </li>
         <li
-          className={bounceMap.experiences ? "bounce" : ""}
-          onMouseLeave={() => handleMouseLeave("experiences")}
-        >
-          EXPÉRIENCES
-        </li>
-        <li
           className={bounceMap.competences ? "bounce" : ""}
           onMouseLeave={() => handleMouseLeave("competences")}
         >
@@ -58,7 +77,7 @@ const NavBar = () => {
           className={bounceMap.portfolio ? "bounce" : ""}
           onMouseLeave={() => handleMouseLeave("portfolio")}
         >
-          PORTFOLIO
+          PROJETS
         </li>
         <li
           className={bounceMap.contact ? "bounce" : ""}

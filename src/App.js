@@ -1,13 +1,15 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
 import Header from "./components/navbar/Header";
-import Introduction from "./components/introduction/Introduction";
+import Acceuil from "./components/introduction/Acceuil";
+import Competences from "./components/competences/Competences";
 
 const App = () => {
   return (
     <BrowserRouter>
       <Header />
-      <Introduction />
+      <Acceuil />
+      <Competences />
     </BrowserRouter>
   );
 };

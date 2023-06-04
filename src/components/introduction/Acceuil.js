@@ -1,16 +1,10 @@
 import React, { useEffect, useRef } from "react";
-import "./introduction.css";
+import "./acceuil.css";
 import cosmonaute from "../../assets/images/cosmonaute.png";
 
 const Introduction = () => {
   const targetTitleRef = useRef(null);
-  const array = [
-    "Développeur",
-    "Intégrateur-web",
-    "Créatif",
-    "Passionné",
-    "Junior",
-  ];
+  const array = ["Développeur", "Intégrateur-web", "Créatif", "Passionné"];
   let wordIndex = 0;
   let letterIndex = 0;
   let intervalId;
@@ -58,9 +52,8 @@ const Introduction = () => {
   return (
     <article>
       <div className=" div-titles">
-        <h1 className="target-title flexJustifyCenter">Je suis un </h1>
+        <h1 className="target-title ">Je suis </h1>
         <h1 ref={targetTitleRef} className="target-title-second"></h1>
-        <h2>EN SAVOIR PLUS</h2>
         <p>
           Je suis un passionné de développement et de graphisme, spécialisé en
           React JS. Mon objectif est de créer des interfaces web interactives et
@@ -68,6 +61,7 @@ const Introduction = () => {
           constamment à l'affût des tendances et des meilleures pratiques pour
           offrir une expérience utilisateur exceptionnelle.
         </p>
+        <h2 className="more-info">EN SAVOIR PLUS</h2>
       </div>
       <img src={cosmonaute} alt="" className="cosmonaute" />
     </article>
