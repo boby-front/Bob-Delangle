@@ -50,7 +50,7 @@ const Introduction = () => {
   }, []);
 
   return (
-    <article>
+    <article className="article-acceuil">
       <div className=" div-titles">
         <h1 className="target-title ">Je suis </h1>
         <h1 ref={targetTitleRef} className="target-title-second"></h1>
@@ -63,7 +63,9 @@ const Introduction = () => {
         </p>
         <h2 className="more-info">EN SAVOIR PLUS</h2>
       </div>
-      <img src={cosmonaute} alt="" className="cosmonaute" />
+      <div className="div-cosmonaute">
+        <img src={cosmonaute} alt="" className="cosmonaute" />
+      </div>
     </article>
   );
 };

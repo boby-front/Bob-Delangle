@@ -10,15 +10,42 @@ h1 span {
   font-size: 70px;
 }
 
+.target-title {
+  margin-right: 12px;
+  width: 300px;
+}
+
+.target-title-second {
+  height: 96px;
+  white-space: nowrap;
+}
+
+.div-titles {
+  text-align: left;
+  position: relative;
+  width: 35%;
+  margin-left: 25px;
+}
+
+.div-titles p {
+  font-size: 22px;
+  border-top: 1px solid rgb(187, 185, 185);
+  border-bottom: 1px solid rgb(187, 185, 185);
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-top: 30px;
+}
+
 .more-info {
   border: solid 2px rgb(187, 185, 185);
   border-radius: 30px;
   padding: 10px;
   color: rgb(187, 185, 185);
-  position: absolute;
-  top: 580px;
   cursor: pointer;
   transition: all ease-in-out 1s;
+  width: 230px;
+  text-align: center;
+  margin-top: 70px;
 }
 
 .more-info:hover {
@@ -27,35 +54,15 @@ h1 span {
   transform: scale(1.1);
 }
 
-.target-title {
-  margin-right: 12px;
-  width: 300px;
-}
-
-.div-titles {
-  margin-top: 150px;
-  margin-left: 70px;
-  text-align: left;
-  position: relative;
-}
-
-.div-titles p {
-  position: absolute;
-  top: 200px;
-  width: 400px;
-  font-size: 22px;
-  border-top: 1px solid rgb(187, 185, 185);
-  border-bottom: 1px solid rgb(187, 185, 185);
-  padding-top: 30px;
-  padding-bottom: 30px;
+.div-cosmonaute {
+  width: 60%;
+  height: 100%;
+  margin: auto 0px;
 }
 
 .cosmonaute {
-  height: 800px;
+  width: 100%;
   transform: scaleX(-1) translateY(0);
-  position: absolute;
-  right: 300px;
-  top: 150px;
   animation: levitate 2s ease-in-out infinite alternate;
 }
 
@@ -71,6 +78,9 @@ h1 span {
   }
 }
 
-article {
-  height: 80vh;
+.article-acceuil {
+  padding-top: 150px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }

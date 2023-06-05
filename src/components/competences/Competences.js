@@ -11,6 +11,7 @@ import swagger from "../../assets/logo_skill/swagger.png";
 import github from "../../assets/logo_skill/github.png";
 import vscode from "../../assets/logo_skill/vscode.png";
 import devtool from "../../assets/logo_skill/devtool.png";
+import responsiv from "../../assets/logo_skill/responsiv.png";
 
 const Competences = () => {
   const [animationTriggered, setAnimationTriggered] = useState(false);
@@ -180,6 +181,17 @@ const Competences = () => {
             <img src={vscode} alt="" />
             <div className="skill-info">
               <h2>VSCode</h2>
+              <p>Avancé</p>
+            </div>
+          </div>
+
+          <div
+            className={`card ${activeCardIndex === 11 ? "active" : ""}`}
+            onClick={() => toggleCardActive(11)}
+          >
+            <img src={responsiv} alt="" />
+            <div className="skill-info">
+              <h2>Responsiv</h2>
               <p>Avancé</p>
             </div>
           </div>
