@@ -5,18 +5,38 @@
   color: rgb(167, 165, 165);
 }
 
+.article-apropos p {
+  font-style: italic;
+  font-size: 22px;
+  text-align: center;
+}
+
 .section-apropos {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-radius: 35px;
-  padding: 25px;
-  border: solid 1px rgb(202, 202, 202);
+  margin: 30px 0px;
+  padding: 20px;
+  border: solid 2px white;
+  border-radius: 50px;
   transition: all 1s ease-in-out;
+  background-image: linear-gradient(
+    to top,
+    #bebebe81,
+    #cecece7a,
+    #dededeaf,
+    #eeeeeeb0,
+    #ffffffa8
+  );
+  box-shadow: 4px 5px 10px 2px rgba(83, 83, 83, 0.39);
+}
+
+.section-apropos p {
+  color: rgb(153, 152, 152);
 }
 
 .div-photo-profil {
-  border: solid 1px rgb(155, 153, 153);
+  border: solid 4px rgb(255, 255, 255);
   border-radius: 50%;
   margin-right: 30px;
   height: 350px;
@@ -26,40 +46,54 @@
   background-image: url(../../assets/images/photo-bob.png);
   opacity: 0;
   transition: all 1s ease-in-out;
+  box-shadow: 10px 17px 23px 0px rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 10px 17px 23px 0px rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 10px 17px 23px 0px rgba(0, 0, 0, 0.19);
 }
 
 .div-description-profil {
   width: 65%;
-  height: 440px;
+}
+
+.div-description-profil p {
+  text-align: left;
 }
 
 .name-apropos {
-  color: #989de7;
+  color: #b97ae6;
   font-size: 34px;
   font-style: italic;
 }
 
 .button-photo {
-  color: rgb(187, 185, 185);
-  background-color: white;
+  color: grey;
+  background-color: transparent;
   font-size: 30px;
   width: 150px;
   height: 50px;
   border-radius: 30px;
   margin-left: 50px;
   cursor: pointer;
-  border: 2px solid rgb(187, 185, 185);
+  border: 2px solid grey;
   transition: all 1s ease-in-out;
 }
 
 .button-photo:hover {
-  color: #b76efd;
-  border: #b76efd solid 2px;
+  color: #b97ae6;
+  border: #b97ae6 solid 2px;
   transform: scale(1.1);
+  box-shadow: 9px 6px 23px 0px rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 9px 6px 23px 0px rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 9px 6px 23px 0px rgba(0, 0, 0, 0.19);
 }
 
-.section-apropos.full-width {
-  width: 100%;
+.button-clicked {
+  color: #b97ae6;
+  border: #b97ae6 solid 2px;
+  transform: scale(1.1);
+  box-shadow: 9px 6px 23px 0px rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 9px 6px 23px 0px rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 9px 6px 23px 0px rgba(0, 0, 0, 0.19);
 }
 
 .div-photo-profil.visible {

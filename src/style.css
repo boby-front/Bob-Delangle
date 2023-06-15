@@ -5,6 +5,10 @@
   font-family: "Nunito Sans", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   max-width: 1440px;
   margin: auto;
@@ -22,10 +26,6 @@ ul {
 
 ul {
   list-style-type: none;
-}
-
-a {
-  text-decoration: none;
 }
 
 /********* TOOLBOX ***********/

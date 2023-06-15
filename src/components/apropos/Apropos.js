@@ -6,12 +6,15 @@ const Apropos = () => {
 
   const handleButtonClick = () => {
     setIsPhotoVisible(!isPhotoVisible);
+    const button = document.querySelector(".button-photo");
+    button.classList.toggle("button-clicked");
   };
 
   return (
-    <article className="article-apropos">
+    <article className="article-apropos" id="apropos">
       <h1>À propos</h1>
       <div className="line"></div>
+      <p>Au plaisir de faire votre connaissance ! Voici une partie de moi.</p>
       <section
         className={`section-apropos ${isPhotoVisible ? "full-width" : ""}`}
       >

@@ -1,0 +1,56 @@
+.article-contact {
+  margin-top: 90px;
+}
+
+.article-contact a {
+  width: 20%;
+  width: 20%;
+  height: auto;
+  border: 1px solid rgb(207, 205, 205);
+  border-radius: 40px;
+  position: relative;
+}
+
+.article-contact a img {
+  width: 100%;
+  transition: opacity 1s ease-in-out;
+  top: 0;
+}
+
+@keyframes vasille-animation {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 10px;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+.vasille-effect:hover {
+  animation: vasille-animation 1s infinite;
+}
+
+.article-contact h1 {
+  font-size: 45px;
+  margin: 0 0 20px;
+  color: rgb(167, 165, 165);
+}
+
+.article-contact p {
+  font-size: 22px;
+}
+
+.groupe-contacts {
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.link-contact {
+  text-decoration: none;
+  cursor: pointer;
+  width: 100%;
+}

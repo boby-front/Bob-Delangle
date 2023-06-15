@@ -22,18 +22,14 @@
 .skill-cards-container {
   display: flex;
   justify-content: space-evenly;
-  margin: 50px;
-  border-radius: 30px;
+  margin: 50px 0px;
   padding: 30px 20px;
-  background-image: linear-gradient(
-    to top,
-    #d6b9cf,
-    #ca9ccd,
-    #b483d1,
-    #906ed8,
-    #4f5ee2
-  );
-  box-shadow: 1px 1px 14px 0px #000000;
+  background-image: url(../../assets/images/cover-image.png);
+  background-attachment: fixed;
+  background-position: center;
+  box-shadow: 10px 17px 23px 0px rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 10px 17px 23px 0px rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 10px 17px 23px 0px rgba(0, 0, 0, 0.19);
 }
 
 .skill-cards {
@@ -54,7 +50,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  transition: all 1s ease-in-out;
+  transition: all 0.5s ease-in-out;
   background-color: white;
 }
 
@@ -143,4 +139,32 @@ p {
 .article-competence.animation-triggered .animate-right-to-left {
   opacity: 0;
   animation: animateRightToLeft 2s forwards;
+}
+
+.section-connaissances {
+  width: 100%;
+  flex-wrap: wrap;
+  margin-bottom: 80px;
+  padding: 0px 30px;
+}
+
+.section-connaissances aside {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.section-connaissances aside p {
+  margin: 10px 30px;
+  border: solid 1px rgb(207, 206, 206);
+  border-radius: 25px;
+  padding: 7px 15px;
+  box-shadow: 5px 5px 15px -6px #c4c2c2;
+}
+
+.section-connaissances aside p i {
+  margin: 0px 7px;
+  color: rgb(14, 192, 14);
 }

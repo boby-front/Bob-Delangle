@@ -13,11 +13,13 @@ h1 span {
 .target-title {
   margin-right: 12px;
   width: 300px;
+  margin: 0;
 }
 
 .target-title-second {
   height: 96px;
   white-space: nowrap;
+  margin: 0;
 }
 
 .div-titles {
@@ -37,21 +39,28 @@ h1 span {
 }
 
 .more-info {
-  border: solid 2px rgb(187, 185, 185);
+  border: solid 3px rgb(187, 185, 185);
   border-radius: 30px;
-  padding: 10px;
+  padding: 15px;
   color: rgb(187, 185, 185);
   cursor: pointer;
   transition: all ease-in-out 1s;
-  width: 230px;
+  width: 250px;
   text-align: center;
   margin-top: 70px;
+  position: absolute;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 800;
 }
 
 .more-info:hover {
   color: #b76efd;
   border: #b76efd solid 2px;
   transform: scale(1.1);
+  box-shadow: 9px 6px 23px 0px rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 9px 6px 23px 0px rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 9px 6px 23px 0px rgba(0, 0, 0, 0.19);
 }
 
 .div-cosmonaute {

@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import "./acceuil.css";
 import cosmonaute from "../../assets/images/cosmonaute.png";
 
-const Introduction = () => {
+const Acceuil = () => {
   const targetTitleRef = useRef(null);
   const array = ["Développeur", "Intégrateur-web", "Créatif", "Passionné"];
   let wordIndex = 0;
@@ -61,7 +61,9 @@ const Introduction = () => {
           constamment à l'affût des tendances et des meilleures pratiques pour
           offrir une expérience utilisateur exceptionnelle.
         </p>
-        <h2 className="more-info">EN SAVOIR PLUS</h2>
+        <a href="#apropos" className="more-info">
+          EN SAVOIR PLUS
+        </a>
       </div>
       <div className="div-cosmonaute">
         <img src={cosmonaute} alt="" className="cosmonaute" />
@@ -70,4 +72,4 @@ const Introduction = () => {
   );
 };
 
-export default Introduction;
+export default Acceuil;

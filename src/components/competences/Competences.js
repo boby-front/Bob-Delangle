@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import "./competence.css";
 import html from "../../assets/logo_skill/html.png";
 import css from "../../assets/logo_skill/css.png";
@@ -14,29 +14,8 @@ import devtool from "../../assets/logo_skill/devtool.png";
 import responsiv from "../../assets/logo_skill/responsiv.png";
 
 const Competences = () => {
-  const [animationTriggered, setAnimationTriggered] = useState(false);
   const [activeCardIndex, setActiveCardIndex] = useState(null);
-
   const articleRef = useRef(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!animationTriggered && articleRef.current) {
-        const rect = articleRef.current.getBoundingClientRect();
-        const scrollPosition = window.innerHeight + window.pageYOffset;
-
-        if (scrollPosition > rect.top + window.pageYOffset) {
-          setAnimationTriggered(true);
-        }
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [animationTriggered]);
 
   const toggleCardActive = (index) => {
     if (index === activeCardIndex) {
@@ -47,17 +26,10 @@ const Competences = () => {
   };
 
   return (
-    <article
-      ref={articleRef}
-      className={`article-competence ${
-        animationTriggered ? "animation-triggered" : ""
-      }`}
-    >
-      <h1 className="animate-left-to-right opacity-transition">
-        Mes compétences & outils
-      </h1>
+    <article ref={articleRef} className="article-competence">
+      <h1>Mes compétences & outils</h1>
       <div className="line"></div>
-      <p className="animate-right-to-left hover-info opacity-transition">
+      <p className="textCenter">
         Survolez mes compétences pour découvrir mes connaissances. Cliquez, vous
         savez.
       </p>
@@ -197,6 +169,34 @@ const Competences = () => {
           </div>
         </section>
       </div>
+      <section className="flexCenter section-connaissances">
+        <aside className="flexCenter">
+          <p>
+            <i className="fa-solid fa-check fa-lg"></i>Accessibilité
+          </p>
+          <p>
+            <i className="fa-solid fa-check fa-lg"></i>Clean code
+          </p>
+          <p>
+            <i className="fa-solid fa-check fa-lg"></i>W3C
+          </p>
+          <p>
+            <i className="fa-solid fa-check fa-lg"></i>Bonne pratique SEO
+          </p>
+          <p>
+            <i className="fa-solid fa-check fa-lg"></i>Tests unitaires
+          </p>
+          <p>
+            <i className="fa-solid fa-check fa-lg"></i>Méthode Agile
+          </p>
+          <p>
+            <i className="fa-solid fa-check fa-lg"></i>UI/UX
+          </p>
+          <p>
+            <i className="fa-solid fa-check fa-lg"></i>Responsive design
+          </p>
+        </aside>
+      </section>
     </article>
   );
 };
