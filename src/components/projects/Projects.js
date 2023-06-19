@@ -165,7 +165,7 @@ const Projects = () => {
             onMouseLeave={() => setHoveredProjectId(null)}
           >
             <img src={vaisseau} alt="" />
-            <div className="visit-project">
+            <div className="visit-project " id="sophie-git">
               <h2>Sophie-Bluel</h2>
               <a
                 className="button-github"

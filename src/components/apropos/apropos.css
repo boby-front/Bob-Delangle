@@ -99,3 +99,36 @@
 .div-photo-profil.visible {
   opacity: 1;
 }
+
+@media (max-width: 768px) {
+  .section-apropos {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .button-photo {
+    display: none;
+  }
+
+  .name-apropos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  p.text-apropos {
+    text-align: center;
+    font-size: 19px;
+    width: 100%;
+  }
+
+  .div-description-profil {
+    width: 100%;
+  }
+
+  .div-photo-profil {
+    opacity: 1;
+    margin: 20px 0px;
+  }
+}

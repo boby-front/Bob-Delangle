@@ -54,7 +54,7 @@ const Acceuil = () => {
       <div className=" div-titles">
         <h1 className="target-title ">Je suis </h1>
         <h1 ref={targetTitleRef} className="target-title-second"></h1>
-        <p>
+        <p className="text-acceuil">
           Je suis un passionné de développement et de graphisme, spécialisé en
           React JS. Mon objectif est de créer des interfaces web interactives et
           esthétiques en utilisant les dernières technologies. Je suis

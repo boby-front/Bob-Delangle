@@ -93,3 +93,46 @@ h1 span {
   justify-content: space-between;
   width: 100%;
 }
+
+@media (max-width: 768px) {
+  .article-acceuil {
+    flex-direction: column;
+    align-items: flex-end;
+    padding-top: 100px;
+  }
+
+  .text-acceuil {
+    padding: 30px 15px;
+    text-align: center;
+  }
+
+  img.cosmonaute {
+    text-align: right;
+    margin-top: 30px;
+  }
+
+  .div-titles {
+    width: 100%;
+  }
+
+  .more-info {
+    width: 150px;
+    margin-left: 20px;
+    color: #b76efd;
+    border: #b76efd solid 2px;
+    box-shadow: 9px 6px 23px 0px rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 9px 6px 23px 0px rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 9px 6px 23px 0px rgba(0, 0, 0, 0.19);
+  }
+  .target-title,
+  .target-title-second span {
+    font-size: 49px;
+  }
+
+  .target-title,
+  .target-title-second {
+    margin-left: 20px;
+    text-align: center;
+    margin: auto;
+  }
+}

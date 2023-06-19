@@ -30,7 +30,7 @@ const Apropos = () => {
             </button>
           </h2>
           <br />
-          <p>
+          <p className="text-apropos">
             Bonjour et bienvenue sur mon portfolio ! Je suis un développeur
             front-end spécialisé en interfaces web esthétiques et intuitives,
             avec une expertise en développement React JS. Mon parcours atypique

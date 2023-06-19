@@ -17,7 +17,7 @@
 
 .project-card {
   border-radius: 25px;
-  margin-bottom: 10px;
+  margin: 5px;
   position: relative;
   height: 250px;
   width: 250px;
@@ -190,4 +190,78 @@
 
 .description-projects.show {
   opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    width: 140px;
+    height: 140px;
+    margin: 5px;
+    border-radius: 10px;
+  }
+
+  .description-projects {
+    margin-top: 10px;
+  }
+
+  .visit-project {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 25px;
+    transform: none;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transition: none;
+    opacity: 1;
+    border-radius: 10px;
+  }
+
+  .visit-project h2 {
+    display: none;
+  }
+
+  .visit-project a {
+    width: 90%;
+    font-size: 15px;
+  }
+  a.button-github .visit-project a:hover {
+    transform: scale(1.1);
+    box-shadow: 11px 13px 15px -6px #fffbfb;
+  }
+
+  .project-card:hover .visit-project {
+    left: 0;
+    opacity: 1;
+  }
+
+  .link-project {
+    position: absolute;
+    top: 100px;
+    z-index: 200;
+  }
+
+  .project-card #sophie-git {
+    justify-content: end;
+  }
+
+  .description,
+  .point-fort {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .description {
+    text-align: center;
+  }
+
+  .div-description {
+    flex-direction: column;
+  }
 }

@@ -12,7 +12,9 @@ const NavBar = () => {
     contact: false,
   });
   const [prevScrollPos, setPrevScrollPos] = useState(0);
-  const [headerOffset, setHeaderOffset] = useState(0);
+  const [headerOffset, setHeaderOffset] = useState(-250);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleMouseLeave = (item) => {
     setBounceMap((prevState) => ({
@@ -28,38 +30,68 @@ const NavBar = () => {
     }, 500);
   };
 
+  const handleToggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
 
-      if (currentScrollPos > prevScrollPos) {
-        setHeaderOffset(Math.max(headerOffset - 101, -101));
+      if (windowWidth >= 768) {
+        if (currentScrollPos > prevScrollPos) {
+          setHeaderOffset(Math.max(headerOffset - 101, -101));
+        } else {
+          setHeaderOffset(Math.min(headerOffset + 101, 0));
+        }
       } else {
-        setHeaderOffset(Math.min(headerOffset + 101, 0));
+        setHeaderOffset(0);
       }
 
       setPrevScrollPos(currentScrollPos);
     };
 
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
     window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
     };
-  }, [prevScrollPos, headerOffset]);
+  }, [prevScrollPos, headerOffset, windowWidth]);
 
   return (
     <header
-      className="flexBetween flexCenter"
-      style={{ transform: `translateY(${headerOffset}px)` }}
+      className={`flexBetween flexCenter ${isMenuOpen ? "menu-open" : ""}`}
+      style={{
+        transform:
+          windowWidth <= 769
+            ? `translateX(${
+                isMenuOpen ? "0" : "-250px"
+              }) translateY(${headerOffset}px)`
+            : "none",
+      }}
     >
-      <img src={logoResponsiv} alt="" className="logo-responsiv" />
+      <div
+        className={`toggle-btn ${isMenuOpen ? "active" : ""}`}
+        id="btn"
+        onClick={handleToggleMenu}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <img src={logoResponsiv} alt="logo-computer" className="logo-responsiv" />
       <ul className="nav-link flexBetween">
         <li
           className={bounceMap.accueil ? "bounce" : ""}
           onMouseLeave={() => handleMouseLeave("accueil")}
         >
-          ACCEUIL
+          ACCUEIL
         </li>
         <li
           className={bounceMap.aPropos ? "bounce" : ""}
