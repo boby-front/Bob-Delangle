@@ -22,7 +22,7 @@ const Contact = () => {
         </a>
 
         <a
-          href="mailto:exemple@email.com"
+          href="mailto:delanglebob38@gmail.com"
           className="link-contact affiche-link vasille-effect"
         >
           <img src={mail} alt="" className="mail" />
