@@ -50,7 +50,7 @@ const Acceuil = () => {
   }, []);
 
   return (
-    <article className="article-acceuil">
+    <article className="article-acceuil" id="acceuil">
       <div className=" div-titles">
         <h1 className="target-title ">Je suis </h1>
         <h1 ref={targetTitleRef} className="target-title-second"></h1>

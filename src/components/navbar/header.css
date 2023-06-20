@@ -10,6 +10,10 @@ header {
   max-width: 1440px;
 }
 
+.hide-header {
+  transform: translateY(-100%);
+}
+
 .toggle-btn {
   display: none;
 }
@@ -25,6 +29,7 @@ header {
   transition: all 0.3s ease;
   padding: 15px;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .nav-link li:hover {
@@ -67,6 +72,7 @@ header {
 
   header {
     width: 250px;
+    padding: 0px;
   }
   .logo-responsiv {
     display: none;
@@ -79,7 +85,6 @@ header {
     flex-direction: column;
     background-color: rgba(255, 255, 255, 0.747);
     justify-content: space-between;
-    width: 100%;
     font-size: 25px;
   }
 
@@ -100,6 +105,10 @@ header {
     transition: none;
     transform: none;
     background-color: #b76efd;
+    color: white;
+  }
+
+  .nav-link li a:hover {
     color: white;
   }
 
@@ -144,5 +153,9 @@ header {
   }
   .active span:nth-child(3) {
     transform: rotate(-45deg);
+  }
+
+  .hide-header {
+    transform: translateX(-100%);
   }
 }

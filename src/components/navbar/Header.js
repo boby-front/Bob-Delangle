@@ -12,9 +12,11 @@ const NavBar = () => {
     contact: false,
   });
   const [prevScrollPos, setPrevScrollPos] = useState(0);
-  const [headerOffset, setHeaderOffset] = useState(-250);
+  const [headerOffset, setHeaderOffset] = useState(0);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isLinkClicked, setIsLinkClicked] = useState(false);
+  const [scrollDirection, setScrollDirection] = useState("none");
 
   const handleMouseLeave = (item) => {
     setBounceMap((prevState) => ({
@@ -32,20 +34,28 @@ const NavBar = () => {
 
   const handleToggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+    setIsLinkClicked(false);
+  };
+
+  const handleLinkClick = () => {
+    setIsLinkClicked(true);
+    setIsMenuOpen(false);
   };
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
 
-      if (windowWidth >= 768) {
+      if (windowWidth > 768) {
         if (currentScrollPos > prevScrollPos) {
-          setHeaderOffset(Math.max(headerOffset - 101, -101));
+          setScrollDirection("down");
+          setHeaderOffset(-80);
+          document.querySelector("header").classList.add("hide-header");
         } else {
-          setHeaderOffset(Math.min(headerOffset + 101, 0));
+          setScrollDirection("up");
+          setHeaderOffset(0);
+          document.querySelector("header").classList.remove("hide-header");
         }
-      } else {
-        setHeaderOffset(0);
       }
 
       setPrevScrollPos(currentScrollPos);
@@ -65,60 +75,77 @@ const NavBar = () => {
   }, [prevScrollPos, headerOffset, windowWidth]);
 
   return (
-    <header
-      className={`flexBetween flexCenter ${isMenuOpen ? "menu-open" : ""}`}
-      style={{
-        transform:
-          windowWidth <= 769
-            ? `translateX(${
-                isMenuOpen ? "0" : "-250px"
-              }) translateY(${headerOffset}px)`
-            : "none",
-      }}
-    >
-      <div
-        className={`toggle-btn ${isMenuOpen ? "active" : ""}`}
-        id="btn"
-        onClick={handleToggleMenu}
+    <div className="root">
+      <header
+        className={`flexBetween flexCenter ${isMenuOpen ? "menu-open" : ""} ${
+          (windowWidth <= 768 && !isMenuOpen) || isLinkClicked
+            ? "hide-header"
+            : ""
+        }`}
       >
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <img src={logoResponsiv} alt="logo-computer" className="logo-responsiv" />
-      <ul className="nav-link flexBetween">
-        <li
-          className={bounceMap.accueil ? "bounce" : ""}
-          onMouseLeave={() => handleMouseLeave("accueil")}
+        <div
+          className={`toggle-btn ${isMenuOpen ? "active" : ""}`}
+          id="btn"
+          onClick={handleToggleMenu}
         >
-          ACCUEIL
-        </li>
-        <li
-          className={bounceMap.aPropos ? "bounce" : ""}
-          onMouseLeave={() => handleMouseLeave("aPropos")}
-        >
-          À PROPOS
-        </li>
-        <li
-          className={bounceMap.competences ? "bounce" : ""}
-          onMouseLeave={() => handleMouseLeave("competences")}
-        >
-          COMPÉTENCES
-        </li>
-        <li
-          className={bounceMap.portfolio ? "bounce" : ""}
-          onMouseLeave={() => handleMouseLeave("portfolio")}
-        >
-          PROJETS
-        </li>
-        <li
-          className={bounceMap.contact ? "bounce" : ""}
-          onMouseLeave={() => handleMouseLeave("contact")}
-        >
-          CONTACT
-        </li>
-      </ul>
-    </header>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <img
+          src={logoResponsiv}
+          alt="logo-computer"
+          className="logo-responsiv"
+        />
+        <ul className="nav-link flexBetween">
+          <li
+            className={`${bounceMap.accueil ? "bounce" : ""} ${
+              isLinkClicked ? "active" : ""
+            }`}
+            onMouseLeave={() => handleMouseLeave("accueil")}
+            onClick={handleLinkClick}
+          >
+            <a href="#acceuil">ACCUEIL</a>
+          </li>
+          <li
+            className={`${bounceMap.aPropos ? "bounce" : ""} ${
+              isLinkClicked ? "active" : ""
+            }`}
+            onMouseLeave={() => handleMouseLeave("aPropos")}
+            onClick={handleLinkClick}
+          >
+            <a href="#apropos">À PROPOS</a>
+          </li>
+          <li
+            className={`${bounceMap.competences ? "bounce" : ""} ${
+              isLinkClicked ? "active" : ""
+            }`}
+            onMouseLeave={() => handleMouseLeave("competences")}
+            onClick={handleLinkClick}
+          >
+            <a href="#competences">COMPÉTENCES</a>
+          </li>
+          <li
+            className={`${bounceMap.portfolio ? "bounce" : ""} ${
+              isLinkClicked ? "active" : ""
+            }`}
+            onMouseLeave={() => handleMouseLeave("portfolio")}
+            onClick={handleLinkClick}
+          >
+            <a href="#projets">PROJETS</a>
+          </li>
+          <li
+            className={`${bounceMap.contact ? "bounce" : ""} ${
+              isLinkClicked ? "active" : ""
+            }`}
+            onMouseLeave={() => handleMouseLeave("contact")}
+            onClick={handleLinkClick}
+          >
+            <a href="#contact">CONTACTS</a>
+          </li>
+        </ul>
+      </header>
+    </div>
   );
 };
 

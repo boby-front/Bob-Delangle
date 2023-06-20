@@ -98,7 +98,7 @@ const Projects = () => {
   });
 
   return (
-    <article className="article-projects">
+    <article className="article-projects" id="projets">
       <h1>Mes projets</h1>
       <div className="line"></div>
       <p className="textCenter">

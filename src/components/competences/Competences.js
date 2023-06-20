@@ -26,7 +26,7 @@ const Competences = () => {
   };
 
   return (
-    <article ref={articleRef} className="article-competence">
+    <article ref={articleRef} className="article-competence" id="competences">
       <h1>Mes compétences & outils</h1>
       <div className="line"></div>
       <p className="textCenter">
