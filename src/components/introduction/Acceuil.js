@@ -4,7 +4,7 @@ import cosmonaute from "../../assets/images/cosmonaute.png";
 
 const Acceuil = () => {
   const targetTitleRef = useRef(null);
-  const array = ["Développeur", "Intégrateur-web", "Créatif", "Passionné"];
+  const array = ["Développeur", "Fullstack", "Créatif", "Passionné"];
   let wordIndex = 0;
   let letterIndex = 0;
   let intervalId;
@@ -52,14 +52,17 @@ const Acceuil = () => {
   return (
     <article className="article-acceuil" id="acceuil">
       <div className=" div-titles">
-        <h1 className="target-title ">Je suis </h1>
+        <h1 className="target-title">
+          <span>&#123;</span> Je suis <span>&#125;</span>
+        </h1>
+
         <h1 ref={targetTitleRef} className="target-title-second"></h1>
         <p className="text-acceuil">
           Je suis un passionné de développement et de graphisme, spécialisé en
-          React JS. Mon objectif est de créer des interfaces web interactives et
-          esthétiques en utilisant les dernières technologies. Je suis
-          constamment à l'affût des tendances et des meilleures pratiques pour
-          offrir une expérience utilisateur exceptionnelle.
+          React et Node.Js. Mon objectif est de créer des interfaces web
+          interactives et esthétiques en utilisant les dernières technologies.
+          Je suis constamment à l'affût des tendances et des meilleures
+          pratiques pour offrir une expérience utilisateur exceptionnelle.
         </p>
         <a href="#apropos" className="more-info">
           EN SAVOIR PLUS

@@ -32,9 +32,9 @@ const Apropos = () => {
           <br />
           <p className="text-apropos">
             Bonjour et bienvenue sur mon portfolio ! Je suis un développeur
-            front-end spécialisé en interfaces web esthétiques et intuitives,
-            avec une expertise en développement React JS. Mon parcours atypique
-            dans l'infographie a renforcé mes compétences en design et
+            Fullstack spécialisé en interfaces web esthétiques et intuitives,
+            avec une expertise en développement React et Node.Js Mon parcours
+            atypique dans l'infographie a renforcé mes compétences en design et
             créativité. Passionné par le développement web, j'ai plongé dans
             l'apprentissage autodidacte, puis me suis perfectionné lors d'une
             formation intensive de 9 mois chez OpenClassrooms, en mettant
@@ -42,9 +42,10 @@ const Apropos = () => {
             <br /> <br />
             J'ai acquis une solide compréhension des concepts fondamentaux de
             React JS, des bibliothèques telles que Redux, React Router et Axios,
-            et des meilleures pratiques pour créer des applications web
-            dynamiques et interactives. Aujourd'hui, en tant que développeur
-            front-end freelance, je suis fier d'offrir des interfaces réactives,
+            pour le Front-end, ainsi que Node.Js / Express pour le Back-end et
+            des meilleures pratiques pour créer des applications web dynamiques
+            et interactives. Aujourd'hui, en tant que développeur Fullstack
+            freelance, je suis fier d'offrir des interfaces réactives,
             optimisées et évolutives. Explorez mon portfolio pour découvrir mes
             projets et n'hésitez pas à me contacter pour concrétiser votre
             vision.

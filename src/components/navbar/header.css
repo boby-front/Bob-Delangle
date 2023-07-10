@@ -25,6 +25,10 @@ header {
   cursor: pointer;
 }
 
+.nav-link li a {
+  font-size: 19px;
+}
+
 .nav-link li {
   transition: all 0.3s ease;
   padding: 15px;
@@ -85,6 +89,9 @@ header {
     flex-direction: column;
     background-color: rgba(255, 255, 255, 0.747);
     justify-content: space-between;
+  }
+
+  .nav-link li a {
     font-size: 25px;
   }
 

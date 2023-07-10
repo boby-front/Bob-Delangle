@@ -10,7 +10,7 @@ import figma from "../../assets/logo_skill/figma.png";
 import swagger from "../../assets/logo_skill/swagger.png";
 import github from "../../assets/logo_skill/github.png";
 import vscode from "../../assets/logo_skill/vscode.png";
-import devtool from "../../assets/logo_skill/devtool.png";
+import redux from "../../assets/logo_skill/redux.png";
 import responsiv from "../../assets/logo_skill/responsiv.png";
 
 const Competences = () => {
@@ -97,7 +97,7 @@ const Competences = () => {
             <img src={node} alt="" />
             <div className="skill-info">
               <h2>Node.JS</h2>
-              <p>Débutant</p>
+              <p>Intermédiaire</p>
             </div>
           </div>
         </section>
@@ -107,10 +107,10 @@ const Competences = () => {
             className={`card ${activeCardIndex === 6 ? "active" : ""}`}
             onClick={() => toggleCardActive(6)}
           >
-            <img src={devtool} alt="" />
+            <img src={redux} alt="" />
             <div className="skill-info">
-              <h2>DevTool</h2>
-              <p>Avancé</p>
+              <h2>Redux</h2>
+              <p>Intermédiaire</p>
             </div>
           </div>
 
