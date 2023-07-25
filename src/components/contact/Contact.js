@@ -6,7 +6,7 @@ import In from "../../assets/logo_skill/in.png";
 
 const Contact = () => {
   return (
-    <article className="article-contact" id="contact">
+    <footer className="article-contact" id="contact">
       <h1 className="textCenter">Contacts</h1>
       <div className="line"></div>
       <p className="textCenter">
@@ -36,7 +36,7 @@ const Contact = () => {
           <img src={In} alt="" />
         </a>
       </section>
-    </article>
+    </footer>
   );
 };
 

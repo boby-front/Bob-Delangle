@@ -1,14 +1,15 @@
 import React from "react";
-import { BrowserRouter } from "react-router-dom";
 import Header from "./components/navbar/Header";
 import Main from "./components/main/Main";
+import Contact from "./components/contact/Contact";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <div>
       <Header />
       <Main />
-    </BrowserRouter>
+      <Contact />
+    </div>
   );
 };
 

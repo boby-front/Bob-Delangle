@@ -17,6 +17,7 @@ const Competences = () => {
   const [activeCardIndex, setActiveCardIndex] = useState(null);
   const articleRef = useRef(null);
 
+  // Fonction qui s'active ou non au click des cards au dépends de l'egalité de son index
   const toggleCardActive = (index) => {
     if (index === activeCardIndex) {
       setActiveCardIndex(null);

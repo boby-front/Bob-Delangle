@@ -4,7 +4,6 @@ import Acceuil from "../introduction/Acceuil";
 import Competences from "../competences/Competences";
 import Apropos from "../apropos/Apropos";
 import Projects from "../projects/Projects";
-import Contact from "../contact/Contact";
 
 const Main = () => {
   return (
@@ -13,7 +12,6 @@ const Main = () => {
       <Competences />
       <Projects />
       <Apropos />
-      <Contact />
     </main>
   );
 };

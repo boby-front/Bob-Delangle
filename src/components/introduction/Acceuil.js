@@ -3,24 +3,32 @@ import "./acceuil.css";
 import cosmonaute from "../../assets/images/cosmonaute.png";
 
 const Acceuil = () => {
+  // Créer une référence pour cibler un élément spécifique dans le DOM
   const targetTitleRef = useRef(null);
+
   const array = ["Développeur", "Fullstack", "Créatif", "Passionné"];
+
   let wordIndex = 0;
   let letterIndex = 0;
+
+  // Identifiant de l'intervalle utilisé pour la mise à jour du texte
   let intervalId;
 
   useEffect(() => {
+    // Fonction qui crée une nouvelle lettre dans le titre
     const createLetter = () => {
       const letter = document.createElement("span");
       targetTitleRef.current.appendChild(letter);
       letter.textContent = array[wordIndex][letterIndex];
     };
 
+    // Fonction qui met à jour le texte avec la lettre courante du mot courant
     const updateText = () => {
       if (letterIndex < array[wordIndex].length) {
         createLetter();
         letterIndex++;
       } else {
+        // Si toutes les lettres ont été ajoutées, arrêtez de mettre à jour le texte
         clearInterval(intervalId);
         setTimeout(() => {
           eraseText();
@@ -28,6 +36,7 @@ const Acceuil = () => {
       }
     };
 
+    // Fonction qui efface le texte lettre par lettre
     const eraseText = () => {
       const text = targetTitleRef.current;
       if (text.childNodes.length === 0) {
@@ -42,6 +51,7 @@ const Acceuil = () => {
       }
     };
 
+    // Commencez à mettre à jour le texte dès que le composant est monté
     intervalId = setInterval(updateText, 100);
 
     return () => {

@@ -4,6 +4,7 @@ import "./apropos.css";
 const Apropos = () => {
   const [isPhotoVisible, setIsPhotoVisible] = useState(false);
 
+  // Fonction qui affiche ou non une photo (Au click)
   const handleButtonClick = () => {
     setIsPhotoVisible(!isPhotoVisible);
     const button = document.querySelector(".button-photo");
