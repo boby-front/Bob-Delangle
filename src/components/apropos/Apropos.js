@@ -16,14 +16,8 @@ const Apropos = () => {
       <h1>À propos</h1>
       <div className="line"></div>
       <p>Au plaisir de faire votre connaissance ! Voici une partie de moi.</p>
-      <section
-        className={`section-apropos ${isPhotoVisible ? "full-width" : ""}`}
-      >
-        <aside
-          className={`div-description-profil ${
-            isPhotoVisible ? "narrow-width" : ""
-          }`}
-        >
+      <section className="section-apropos">
+        <aside className="div-description-profil">
           <h2 className="name-apropos">
             Bob Delangle{" "}
             <button className="button-photo" onClick={handleButtonClick}>

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import "./competence.css";
 import html from "../../assets/logo_skill/html.png";
 import css from "../../assets/logo_skill/css.png";
@@ -15,9 +15,8 @@ import responsiv from "../../assets/logo_skill/responsiv.png";
 
 const Competences = () => {
   const [activeCardIndex, setActiveCardIndex] = useState(null);
-  const articleRef = useRef(null);
 
-  // Fonction qui s'active ou non au click des cards au dépends de l'egalité de son index
+  // Fonction qui vérifie legalité des index de Card
   const toggleCardActive = (index) => {
     if (index === activeCardIndex) {
       setActiveCardIndex(null);
@@ -26,8 +25,10 @@ const Competences = () => {
     }
   };
 
+  // Une logique qui affiche les infos des cards au click, elle prend en compte l'index du useState et de toggleCardActive
+
   return (
-    <article ref={articleRef} className="article-competence" id="competences">
+    <article className="article-competence" id="competences">
       <h1>Mes compétences & outils</h1>
       <div className="line"></div>
       <p className="textCenter">

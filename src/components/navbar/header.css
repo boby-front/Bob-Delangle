@@ -40,6 +40,10 @@ header {
   transform: translateY(25px);
   border-bottom: solid 1px #b76efd;
 }
+.nav-active {
+  transform: translateY(25px);
+  border-bottom: solid 1px #b76efd;
+}
 
 .nav-link li.bounce {
   animation-name: bounce;
